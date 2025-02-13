@@ -92,8 +92,7 @@ void List<T>::push_back(T Data)
     }
     else
     {
-        Tail->pNext = new Node<T>(Data, nullptr, Tail);
-        Tail = Tail->pNext;       
+         Tail = Tail->pNext = new Node<T>(Data, nullptr, Tail);   
     }
 
     size++;
